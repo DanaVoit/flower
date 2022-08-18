@@ -1,0 +1,30 @@
+@import "var";
+
+
+body {
+	
+	font-size: 14px;
+	color: $primary;
+	background: $white;
+
+	}
+
+ .container {
+    max-width: 1200px;
+    margin: 0 auto;
+ 
+   
+    }
+
+	.section{
+		padding: 70px 0;
+
+    }
+
+    //@import "blocks/header";
+
+
+
+
+
+	@import "reset.scss";
