@@ -1,0 +1,105 @@
+//About
+
+.about-header{
+    margin-top: 45px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 50px;
+ 
+
+        &-item{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+
+            filter: drop-shadow(0px 3px 10px rgba(0, 0, 0, 0.25));
+        }
+
+        &-btn{
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 18px;
+
+            padding: 16px 0;
+
+            background-color: $primary-bkg;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 4px;
+            border: none;
+            color:$white;
+
+            width: 155px;
+
+            bottom: 4px;
+            position: absolute;
+
+            &:hover{
+                font-weight: 700;
+            }
+        }
+}
+
+.about{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 100px 0 50px 0 ;
+   
+
+    &-title{
+        margin-bottom: 30px;
+    }
+
+    &-txt{
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 18px;
+
+        margin-bottom: 25px;
+        margin-left: 15px;
+        position: relative;
+
+        &:before{
+               margin-left: -15px;
+               margin-top: 9px;
+                width: 10px;
+                height: 2px;
+                transform: rotate(90deg);
+                background-color:$accent;
+                display: block;
+                content: '';
+                transition: display .2s linear;
+
+                position: absolute;
+        }
+    }
+
+   
+}
+
+.about-profile{
+        background: url(../img/abstract_background.png)no-repeat;   
+        background-size: cover;
+         display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-right: 55px;
+
+        &-social{
+            display: flex;
+            flex-direction: column;
+
+            justify-content: space-between;
+            align-items:baseline;
+            &-item{
+                margin-bottom: 20px;
+            }
+        }
+
+}
+

@@ -1,0 +1,35 @@
+//Home - 1 секція
+.home{
+    display: flex;
+  
+
+    &-img{
+        margin-top: 100px;
+    }
+}
+
+.home-inner{
+    padding: 280px 0 200px 0;
+    max-width: 500px;
+
+    &-txt{
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 23px;
+        line-height: 25px;
+      
+        margin: 35px 0;
+
+    }
+
+    &-btn{
+        display: flex;
+        justify-content: space-between;
+
+        max-width: 300px;
+
+       
+    }
+}
+

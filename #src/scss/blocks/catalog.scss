@@ -1,0 +1,41 @@
+//Catalog
+
+.catalog{
+    margin: 50px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between ;
+    text-align: center;
+
+    &-item{
+        margin-bottom: 30px;
+        background: #FFFFFF;
+        box-shadow: 0px 4px 6px #FFC2C7; 
+        transition: transform .4s ease-in-out; 
+        
+        &-profile{
+            padding: 20px 0;
+            &-name{
+                font-family: 'Lora';
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 18px;
+                margin-bottom: 15px;
+            }
+            &-price{
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 18px;
+                margin-bottom: 15px;
+            }
+        }
+
+
+        &:hover{
+            box-shadow: 0px 4px 8px #ACACAC;
+            transform: translateY(-10px);
+        }
+    }
+
+   
+}
