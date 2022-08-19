@@ -1,0 +1,66 @@
+//Footer
+.footer{
+    background-color: $primary-bkg;
+    padding: 50px 0;
+
+    &-logo{
+        
+    }
+
+    &-inner{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+        color:$white;
+        align-items: baseline;
+
+        &-item{
+
+            &-title{
+                font-weight: 400;
+                font-size: 22px;
+                line-height: 18px;
+                margin-bottom:  20px;
+            }
+            &-links{
+                font-family: 'Source Sans Pro';
+                font-weight: 300;
+                font-size: 17px;
+                line-height: 14px;
+
+                margin-bottom: 5px;
+            }
+        }
+            
+        &-social{
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-around;
+
+}
+
+
+    }
+}
+
+.footer-inner-form{
+    position: relative;
+    button{
+        right: -70px;
+        position: absolute;
+        box-shadow: none;
+    }
+    &-input{
+        padding: 11px 20px;
+        background-color: $white;
+        border-radius: 50px;
+        border: none;
+
+        &::placeholder{
+            font-family: 'Source Sans Pro';
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 13px;
+        }
+    }
+}
