@@ -27,6 +27,8 @@ body {
 		font-weight: 400;
         font-size: 34px;
         line-height: 42px;  
+
+		padding-top: 20px;
 	}
 
 
@@ -37,6 +39,7 @@ body {
 	@import "blocks/about";
 	@import "blocks/work";
 	@import "blocks/catalog";
+	@import "blocks/review";
 	@import "blocks/payment";
 	@import "blocks/footer";
 

@@ -1,0 +1,80 @@
+//review
+.review{
+    background: rgba(169, 191, 228, 0.2);
+    padding: 15px 0;
+     &-main{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        width: 600px;
+
+        &-item{
+            margin-left: 45px;
+           
+
+            &-txt{
+                font-family: 'Source Sans Pro';
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 20px;
+                margin-bottom: 10px;
+            }
+            &-info{
+                font-family: 'Source Sans Pro';
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 16px;
+                color:$secondary-txt;
+            }
+        }
+    }
+}
+
+.review-header{
+    margin: 40px 0;
+}
+
+.reviews{
+
+    display: flex;
+    justify-content: center;
+}
+
+.review-form{
+    margin-top: 50px;
+    padding: 30px 0;
+
+    &-title{
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 26px;
+    }
+
+
+    &-input{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        &-name, &-textarea{
+            background-color: $white;
+            border-radius: 10px;
+            border: none;
+            padding: 10px;
+            margin-top: 15px ;
+            &::placeholder{
+                font-family: 'Source Sans Pro';
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 15px;
+            }
+        }
+      
+    }
+
+    &-btn{
+        width: 200px;
+        margin-top: 15px;
+    }
+}
