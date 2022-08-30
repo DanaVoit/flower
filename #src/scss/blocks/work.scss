@@ -13,13 +13,28 @@
     display: flex;
     justify-content: space-between;
   
-    align-items:flex-end;
+    align-items:center;
+
+    @media (max-width: $tablet-bp) {
+       flex-wrap: wrap;
+     }
 }
 
 .work-item{
     margin-right: 40px;
     text-align: center;
+    align-items:flex-end; 
     
+
+    @media (max-width: $tablet-bp) {
+       margin-right: 0;
+       margin-bottom: 25px  ;
+       width: 200px;
+      }
+
+      @media (max-width: $mobile-bp) {
+        width: 300px;
+       }
 
     &:last-child{
         margin-right: 0;

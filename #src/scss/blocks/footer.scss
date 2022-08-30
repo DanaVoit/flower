@@ -3,6 +3,7 @@
     background-color: $primary-bkg;
     padding: 50px 0;
 
+
     &-logo{
         
     }
@@ -14,13 +15,33 @@
         color:$white;
         align-items: baseline;
 
+        @media (max-width: $tablet-bp) {
+           flex-wrap: wrap;
+         }
+               
+
+        @media (max-width: $mobile-bp) {
+         flex-direction: column;
+         justify-content: center;
+            }
+
+
+
+
         &-item{
+            @media (max-width: $tablet-bp) {
+                margin-bottom: 20px;
+                   }
 
             &-title{
                 font-weight: 400;
                 font-size: 22px;
                 line-height: 18px;
                 margin-bottom:  20px;
+
+                @media (max-width: $tablet-bp) {
+                    margin-bottom: 10px;
+                       }
             }
             &-links{
                 font-family: 'Source Sans Pro';
@@ -36,15 +57,13 @@
             margin-top: 20px;
             display: flex;
             justify-content: space-around;
-
-}
-
-
+        }
     }
 }
 
 .footer-inner-form{
     position: relative;
+    
     button{
         right: -70px;
         position: absolute;

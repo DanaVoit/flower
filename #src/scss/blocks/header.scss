@@ -10,8 +10,17 @@
     align-items: center;
     justify-content: space-between;
 
+    @media (max-width: $tablet-bp) {
+        justify-content: center;
+        flex-direction: row-reverse;
+    }
+
     &-links{
         display: flex;
+
+        @media (max-width: $tablet-bp) {
+            display: none;
+        }
         &-item{
             font-weight: 700;
             font-size: 17px;
@@ -53,6 +62,10 @@
             &:last-child{
                 margin-right: 0;
             }
+        }
+
+        @media (max-width: $tablet-bp) {
+            display: none;
         }
     }
 }

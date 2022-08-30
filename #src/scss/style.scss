@@ -29,6 +29,10 @@ body {
         line-height: 42px;  
 
 		padding-top: 20px;
+
+		@media (max-width: $tablet-bp) {
+			font-size: 32px;
+			   }
 	}
 
 

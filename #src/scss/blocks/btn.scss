@@ -27,4 +27,8 @@
         background-color: $accent;
         color:$white;
     }
+
+    @media (max-width: $tablet-bp) {
+       padding: 10px 27px;
+           }
 }

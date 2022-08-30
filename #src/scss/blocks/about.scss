@@ -6,6 +6,10 @@
     flex-direction: row;
     justify-content: space-around;
     margin-bottom: 50px;
+
+    @media (max-width: $tablet-bp) {
+        flex-wrap: wrap;
+     }
  
 
         &-item{
@@ -39,6 +43,10 @@
             &:hover{
                 font-weight: 700;
             }
+
+            @media (max-width: $tablet-bp) {
+                bottom: 64px;
+             }
         }
 }
 
@@ -47,7 +55,9 @@
     justify-content: space-between;
     align-items: center;
     margin: 100px 0 0 0 ;
-   
+    @media (max-width: $tablet-bp) {
+        flex-wrap: wrap;
+     }
 
     &-title{
         margin-bottom: 30px;
@@ -100,6 +110,8 @@
                 margin-bottom: 20px;
             }
         }
-
+        @media (max-width: $tablet-bp) {
+           display: none;
+          }
 }
 
