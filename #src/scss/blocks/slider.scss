@@ -1,0 +1,44 @@
+//slider
+
+.slider{
+    display: flex;
+    justify-content: space-around;
+
+    margin: 50px auto;
+
+    width: 250px;
+    align-items: center;
+
+    &-btn{
+        width: 35px;
+        height: 4px;
+
+        display: block;
+        background-color: $slider-bkg;
+        border: none;
+        border-radius: 2px;
+        cursor: pointer;
+        &:hover{
+            background-color: $accent;
+        }
+    }
+
+        &-dot{
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: $slider-bkg;
+            transition: all ease-in-out 0.4s;
+
+            &:hover{
+                background-color: $accent;
+            }
+
+            &--active{
+                background-color: $accent;
+            }
+
+        }
+
+}
+

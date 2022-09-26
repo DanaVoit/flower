@@ -14,9 +14,12 @@ body {
     max-width: 1000px;
     margin: 0 auto;
 	padding: 0 65px;
+	 
+	@media (max-width: $mobile-bp) {
+		padding: 0 25px;
+	}
    
     }
-
 
 	a{
 		color:inherit;
@@ -40,6 +43,7 @@ body {
     @import "blocks/header";
 	@import "blocks/home";
 	@import "blocks/btn";
+	@import "blocks/slider";
 	@import "blocks/about";
 	@import "blocks/work";
 	@import "blocks/catalog";

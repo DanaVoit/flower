@@ -13,8 +13,8 @@
     display: flex;
     justify-content: space-between;
   
-    align-items:center;
-
+    align-items:flex-end;
+ 
     @media (max-width: $tablet-bp) {
        flex-wrap: wrap;
      }
