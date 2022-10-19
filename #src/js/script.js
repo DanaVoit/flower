@@ -1,101 +1,54 @@
-//динамічне додавання елементів каталогів
-const flowers = [
-    {
-      "image": "https://i.ibb.co/qk3WZzd/bouquet-cart1.png",
-      "name": "Ніжна свіжість",
-      "flovers": "троянди та лілії",
-      "price": 445
-    },
-    {
-      "image": "https://i.ibb.co/kSqMtYg/bouquet-cart2.png",
-      "name": "Сорбет",
-      "flovers": "хризантеми та троянди",
-      "price": 450
-    },
-    {
-      "image": "https://i.ibb.co/P9mTcQT/bouquet-cart3.png",
-      "name": "Yellow song",
-      "flovers": "соняшники та солідаго",
-      "price": 455
-    },
-    {
-      "image": "https://i.ibb.co/M8NL0gT/bouquet-cart4.png",
-      "name": "Персиковий нектар",
-      "flovers": "лілії та троянди",
-      "price": 455
-    },
-    {
-      "image": "https://i.ibb.co/LYMJ9mc/bouquet-cart5.png",
-      "name": "Аврора",
-      "flovers": "лілії та троянди",
-      "price": 460
-    },
-    {
-      "image": "https://i.ibb.co/Y7jdbq5/bouquet-cart6.png",
-      "name": "Класика кохання",
-      "flovers": "червоні троянди",
-      "price": 465
-    },
-   
+//catalogItem
+function createCatalogItem (flower) {
+  const catalogItem = 
+  `<li class="catalog-item">
+      <div class="catalog-item-img" style="background-image: url(${flower.image})"></div>
+      <div class="catalog-item-profile">
+        <p class="catalog-item-profile-name">${flower.name}: <br> ${flower.flovers} </p>
+        <p class="catalog-item-profile-price">${flower.price} грн</p>
+        <button type="button" class="btn">В кошик</button>
+      </div>
+    </li>`
 
- ];
-  
-  function createCatalogItem (flower){
-    const catalogItem = document.createElement('li')
-    catalogItem.classList.add('catalog-item')
-
-    
-    const catalogItemProfile = document.createElement('div')
-    catalogItemProfile.classList.add('catalog-item-profile')
-
-    const catalogImg = document.createElement('div')
-    catalogImg.style.backgroundImage= `url(${flower.image})`
-    catalogImg.classList.add('catalog-item-img')
-
-    const catalogItemProfileName = document.createElement('p')
-    catalogItemProfileName.classList.add('catalog-item-profile-name')
-    catalogItemProfileName.textContent = `${flower.name} : ${flower.flovers}`
-
-    const catalogItemProfilePrice= document.createElement('p')
-    catalogItemProfilePrice.classList.add('catalog-item-profile-price')
-    catalogItemProfilePrice.textContent = `${flower.price} грн `
-
-    const catalogBtn = document.createElement('button')
-    catalogBtn.classList.add('btn')
-    catalogBtn.textContent = 'В кошик'
-
-    catalogItemProfile.append(catalogItemProfileName);
-    catalogItemProfile.append(catalogItemProfilePrice);
-    catalogItemProfile.append(catalogBtn);
+  return createFragmentTemplate(catalogItem);
+}
 
 
-    catalogItem.append(catalogImg)
-    catalogItem.append(catalogItemProfile)
+function createFragmentTemplate(str) {
+  const template = document.createElement('template');
+  template.innerHTML = str;
+  return template.content;
+}
 
-    return catalogItem;
-  }
 
+function appendContent(content) {
+  const catalog = document.getElementById('catalog');
 
-  function appendContent(content) {
-    const catalog = document.getElementById('catalog');
-  
-    catalog.appendChild(content);
-  }
-  
-  function init(flowers) {
+  catalog.appendChild(content);
+}
+
+function init() {
+  fetch('https://run.mocky.io/v3/275cc213-7485-4396-b1ba-c1969194d67f')
+  .then((res) => res.json())
+  .then((data) => {
     const fragment = document.createDocumentFragment();
-  
-    flowers.forEach((flower) => {
+
+    data.forEach((flower) => {
       fragment.appendChild(createCatalogItem(flower));
     });
-  
+
     appendContent(fragment);
-  }
-  
-  init(flowers);
+  })
+    
+}
+
+init();
 
 
-  //слайдер
+
+
+
+//Slider
 
 
 let slideNext = document.querySelector('#slider-next')
@@ -115,13 +68,14 @@ slidePrev.addEventListener('click', function minusSlide() {
 
 function currentSlide(n) {
     showSlides(slideIndex = n);
+    
 }
 
 /* Функція слайдера */
 function showSlides(n) {
     let i;
     let slides = document.querySelectorAll(".review-main");
-    let dot = document.querySelectorAll("#slider-review-dot");
+    
     if (n > slides.length) {
         slideIndex = 1
       }
@@ -130,14 +84,42 @@ function showSlides(n) {
       }
       for (i = 0; i < slides.length; i++) {
           slides[i].style.display = "none"; 
-          dot[i].classList.remove('slider-dot--active')
- 
+         
       }
-
       
-
       slides[slideIndex - 1].style.display = "flex";
-      dot[slideIndex - 1].classList.add('slider-dot--active')
+     
        
   }
+
+
+
+//mobile-menu
+const mobileMenuBtn = document.querySelector('.header-mobile-menu')
+const mobileMenu = document.querySelector('.header-nav-links')
+const mobileHeader = document.querySelector('.header-nav')
+const mobileLinks = document.querySelectorAll('.header-nav-links-item')
+
+if(mobileMenuBtn){
+  mobileMenuBtn.addEventListener('click', function(){
+    mobileMenu.classList.toggle('_mobile')
+    document.body.classList.toggle('_lock')
+    mobileHeader.classList.toggle('_mobile')
+
+  })
+}
+
+  mobileLinks.forEach(element => element.addEventListener('click', function() {
+      mobileMenu.classList.remove('_mobile')
+      document.body.classList.remove('_lock')
+      mobileHeader.classList.remove('_mobile')
+  }))
+
   
+  
+
+
+
+
+
+    

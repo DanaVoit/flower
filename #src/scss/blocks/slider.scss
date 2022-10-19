@@ -11,15 +11,15 @@
 
     &-btn{
         width: 35px;
-        height: 4px;
+        height: 6px;
 
         display: block;
         background-color: $slider-bkg;
         border: none;
-        border-radius: 2px;
+        border-radius: 5px;
         cursor: pointer;
         &:hover{
-            background-color: $accent;
+            background-color: $secondary-txt;
         }
     }
 
@@ -30,9 +30,7 @@
             background-color: $slider-bkg;
             transition: all ease-in-out 0.4s;
 
-            &:hover{
-                background-color: $accent;
-            }
+           
 
             &--active{
                 background-color: $accent;
