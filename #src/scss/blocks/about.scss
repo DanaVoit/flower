@@ -40,10 +40,6 @@
             bottom: 4px;
             position: absolute;
 
-            &:hover{
-                font-weight: 700;
-            }
-
             @media (max-width: $tablet-bp) {
                 bottom: 64px;
              }

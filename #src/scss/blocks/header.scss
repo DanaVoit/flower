@@ -2,7 +2,16 @@
 .header{
     background-color: $primary-bkg;
     color:$white;
-    padding: 30px 0;
+    padding: 15px 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+.header._scroll {
+    position: fixed;
+    z-index: 100;
 }
 
 .header-nav{
@@ -10,8 +19,6 @@
     align-items: center;
     justify-content: space-between;
     transition: all 1s ease 1s ;
-
- 
 
     &-links{
         display: flex;
@@ -107,16 +114,11 @@
     color: $white;
     z-index: 10;
     padding: 100px;
+    margin-top: 60px;
  
 
     
 }
 
 
-
-body._lock{
-    overflow: hidden;
-
-   
-}
 

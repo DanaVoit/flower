@@ -11,10 +11,7 @@
     &-img{
         margin-top: 100px;
 
-        @media (max-width: $tablet-bp) {
-            margin-top: 5px;;  
-         }
-    
+      
         img{
             @media (max-width: $tablet-bp) {
                 transform: rotate(270deg); 
