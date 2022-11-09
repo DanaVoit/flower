@@ -57,6 +57,8 @@ const isMobile = {
 
 
 //add to cart
+function addtoCartModal (){ 
+
 const lockBkg = document.querySelector('.headen')
 const addCart = document.querySelectorAll('#add-cart')
 const cartPopup = document.querySelector('#popup')
@@ -82,6 +84,8 @@ cartClose.addEventListener('click', function(){
   header.style.zIndex = 100;
 
 })  
+
+}
 
 
 //catalogItem
@@ -124,8 +128,9 @@ function init() {
     });
 
     appendContent(fragment);
+    addtoCartModal();
   })
-    
+   
 }
 
 init();
