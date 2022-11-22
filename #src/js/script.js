@@ -56,14 +56,12 @@ const isMobile = {
 };
 
 
-//add to cart
-function addtoCartModal (){ 
-
+//open cart
 const lockBkg = document.querySelector('.headen')
-const addCart = document.querySelectorAll('#add-cart')
+const openCart = document.querySelectorAll('#open-cart')
 const cartPopup = document.querySelector('#popup')
 
-addCart.forEach(element => element.addEventListener('click', function() {
+openCart.forEach(element => element.addEventListener('click', function() {
     if(isMobile.any()) {
       cartPopup.style.right = "-30%"
     } else{
@@ -73,9 +71,9 @@ addCart.forEach(element => element.addEventListener('click', function() {
   document.body.classList.add('_lock')
   lockBkg.classList.remove('headen')
   header.style.zIndex = 0;
-
 }))
 
+//close cart
 const cartClose = document.querySelector('.popup-close')
 cartClose.addEventListener('click', function(){
   cartPopup.style.right = "-1200%";
@@ -85,17 +83,14 @@ cartClose.addEventListener('click', function(){
 
 })  
 
-}
-
-
 //catalogItem
 function createCatalogItem (flower) {
   const catalogItem = 
   `<li class="catalog-item">
-      <div class="catalog-item-img" style="background-image: url(${flower.image})"></div>
+      <div class="catalog-item-img" id="product-img" style="background-image: url(${flower.image})"></div>
       <div class="catalog-item-profile">
-        <p class="catalog-item-profile-name">${flower.name}: <br> ${flower.flovers} </p>
-        <p class="catalog-item-profile-price">${flower.price} грн</p>
+        <p class="catalog-item-profile-name" id="product-name">${flower.name}: <br> ${flower.flovers} </p>
+        <p class="catalog-item-profile-price" id='product-price'>${flower.price} грн</p>
         <button type="button" class="btn" id="add-cart">В кошик</button>
       </div>
     </li>`
@@ -128,12 +123,78 @@ function init() {
     });
 
     appendContent(fragment);
-    addtoCartModal();
   })
-   
+  addCartInit;
 }
 
 init();
+
+
+
+function  addCartInit() {
+  const addCart = document.querySelectorAll('#add-cart')
+  button = addCart[i];
+  for (var i = 0; i < addCart.length; i++) {
+  button.addEventListener('click', addToCartClicked)
+}
+}
+
+ 
+const productRow = document.querySelector('#cart-inner');
+
+function addToCartClicked (event) {
+  button = event.target;
+  var cartItem = button.parentElement;
+  var price = cartItem.querySelector('#product-price')[0].innerText;
+  var productName = document.querySelector('#product-name')[0].innerText
+  
+  var imageSrc = cartItem.querySelector('#product-img')[0].src;
+  addItemToCart (price, productName, imageSrc);
+  updateCartPrice()
+}
+
+function addItemToCart (price, productName, imageSrc) {
+  var productRow = document.createElement('div');
+  productRow.classList.add('popup-cart');
+  var productRows = document.getElementsByClassName('product-rows')[0];
+  var cartImage = document.getElementsByClassName('cart-image');
+  
+ 
+  
+  var cartRowItems = `
+  <div class="popup-cart>
+       <img src=${imageSrc} width="100">
+       <div class="popup-cart-name">
+                <p class="popup-txt">${productName}</p> 
+                <p class="popup-txt">${price} </p> 
+            </div>  
+        </div>
+        <button class="remove-btn">Remove</button>
+        </div>
+        
+      `
+  productRow.innerHTML = cartRowItems;
+  productRows.append(productRow);
+  productRow.getElementsByClassName('remove-btn')[0].addEventListener('click', removeItem)
+  productRow.getElementsByClassName('product-quantity')[0].addEventListener('change', changeQuantity)
+  updateCartPrice()
+}
+// end of add products to cart
+
+// Remove products from cart
+const removeBtn = document.getElementsByClassName('remove-btn');
+for (var i = 0; i < removeBtn.length; i++) {
+  button = removeBtn[i]
+  button.addEventListener('click', removeItem)
+}
+
+function removeItem (event) {
+  btnClicked = event.target
+  btnClicked.parentElement.parentElement.remove()
+  updateCartPrice()
+}
+
+
 
 
 //Slider
