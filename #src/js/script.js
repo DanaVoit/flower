@@ -124,19 +124,17 @@ function init() {
 
     appendContent(fragment);
   })
-  addCartInit;
 }
 
 init();
 
 
 
-function  addCartInit() {
+
   const addCart = document.querySelectorAll('#add-cart')
   button = addCart[i];
   for (var i = 0; i < addCart.length; i++) {
   button.addEventListener('click', addToCartClicked)
-}
 }
 
  
