@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ukr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">  
+    <title>Flower</title>
+</head>
+<body>
+<div class="lock-bckg headen" id="headen"></div>
+        <!--Header-->
+<header class="header">
+    <nav class="header-nav container">
+        <a href="#" class="header-mobile-menu">
+            <img src="../img/burger_menu.png">
+        </a>
+        <a href="#" class="header-logo">
+            <img src="/img/logo.png" width="137">
+        </a>
+        <ul class="header-nav-links">
+           <li class="header-nav-links-item"><a href="#catalog-title" >Каталог</a></li> 
+           <li class="header-nav-links-item"><a href="#" >Про нас</a></li> 
+           <li class="header-nav-links-item"><a href="#" >Збери букет</a></li> 
+           <li class="header-nav-links-item"><a href="#"  >Контакти</a></li> 
+        </ul>
+        <ul class="header-nav-icons">
+            <li class="header-nav-icons-item"><a href="#"><img src="../img/lupa.png" width="20" alt="пошук"></a></li> 
+            <li class="header-nav-icons-item"><a id="open-cart"><img src="../img/basket.png" width="20" alt="корзина для покупок"></a></li> 
+        </ul>
+    </nav>
+</header>
+    <main>
+        <!--Home-->
+
+<section class="home container">
+    <div class="home-inner">
+        <h1 class="section-title"> Букет із кущових троянд <br> “Довгоочікуване щастя”</h1>
+        <p class="home-inner-txt">Ніжний та витончений шик у букеті з троянд - гарний вибір для коханої 
+            людини</p>
+        <div class="home-inner-btn">
+            <button class="btn" type="button" id="open-cart">В кошик</button>
+            <a class="btn" type="button" href="#catalog-title">В каталог</a>
+        </div>
+    </div>
+    <div class="home-img">
+        <img src="/img/bg_web-no-background.png" width="520">
+    </div>
+
+</section>
+        <!--About - секція 2-->
+
+<section class="container">
+
+    <div class="about-header">
+        <div class="about-header-item">
+            <img src="./img/bouquets.jpg" width="330" height="220" >
+            <button  class="about-header-btn" type="button" href="#">Букети</button>
+        </div>
+        <div class="about-header-item">
+            <img src="./img/natural_flowers.jpg " width="330" height="220">
+            <button class="about-header-btn" type="button" href="#">Живі квіти</button>
+        </div>
+        <div class="about-header-item">
+            <img src="./img/own_bouquet.png" width="330" height="220" >
+            <button class="about-header-btn" type="button" href="#">"Свій" букет</button>
+        </div>
+    </div>
+
+    <div class="about">
+        <div class="about-main">
+            <h2 class="section-title about-title">Про нас</h2>
+            <p class="about-txt">Яких квітів тут лише немає! І садові, і польові, і кімнатні у глиняних горщиках. Очі розбігаються від такого достатку.</p>
+            <p class="about-txt">Тут представлена і багата колекція кімнатних рослин: кактуси різної форми та величини, ніжні фіалки, усипані квітами, аспарагуси, фікуси.</p>
+        </div>
+
+        <div class="about-profile">
+            <img src="../img/women.png" width="520">
+            <ul  class="about-profile-social">
+                <li class="about-profile-social-item">
+                    <a href="#" target="_blank"><img src="../img/inst.png" alt="inst" width="25"></a>
+                </li>
+                <li class="about-profile-social-item">
+                    <a href="#" target="_blank"><img src="../img/fb.png" alt="facebook" width="25"></a>
+                </li>
+                <li class="about-profile-social-item">
+                    <a href="#" target="_blank"><img src="../img/viber.png" alt="viber" width="28"></a>
+                </li>
+            </ul >
+        </div>
+    </div>
+</section>
+        <!--Work - секція 3-->
+<section>
+<div class="work">
+    <div class="container">
+        <h2 class="work-title section-title">Працюємо для вас</h2>
+        <ul class="work-inner">
+            <li class="work-item">
+                <img src="../img/constructor.png" width="64">
+                <p class="work-item-txt">Конструктрор унікального букета</p>
+            </li>
+            <li class="work-item">
+                <img src="../img/delivery.png" width="64">
+                <p class="work-item-txt">Безкоштовна доставка по місту до 2-х годин</p>
+            </li>
+            <li class="work-item">
+                <img src="../img/indoor.png" width="64">
+                <p class="work-item-txt">Наявність кімнатних рослин</p>
+            </li>
+            <li class="work-item">
+                <img src="../img/for_loved_ones.png" width="64">
+                <p class="work-item-txt">Вибір квітів для коханих, мам та друзів</p>
+            </li>
+        </ul>
+    </div>
+</div>
+</section>
+        <!--Catalog- секція 4-->
+<section class="container">
+    <h2 class="section-title" id="catalog-title">Каталог</h2>
+    <ul class="catalog" id="catalog"></ul> 
+</section>
+        <!--Review - секція 5-->
+<section >
+    <div class="review">
+        <div class="container">
+            <h2 class="section-title">Відгуки</h2>
+            <div class="reviews">
+                <button class="slider-btn" id="slider-prev"> </button>
+                    <div class="review-main" id="slideItem">
+                        <img src="../img/reviews-photo2.png" width="120">
+                        <div class="review-main-item">
+                            <p class="review-main-item-txt">“Сам не фахівець з квітів, але дружині дуже сподобався оригінальний весняний букет, зібраний із позитивним настроєм. Залишаю свій позитивний відгук магазину на вул. Добровольчих батальонів.”</p>
+                            <p class="review-main-item-info">Дмитро  12.04.22</p>
+                        </div>
+                    </div>
+                    <div class="review-main" id="slideItem">
+                        <img src="../img/reviews-photo1.png" width="120">
+                        <div class="review-main-item">
+                            <p class="review-main-item-txt">“Замовляла квіти у неробочий час (увечері), але зі мною дуже оперативно зв'язався співробітник та пообіцяв доставити букет вранці у призначений час. Так і сталося, квіти були доставлені з точністю секунда в секунду, свіжі та красиві. Рекомендую.”</p>
+                            <p class="review-main-item-info">Людмила  03.04.22</p>
+                        </div>
+                    </div>
+                <button class="slider-btn" id="slider-next"></button>
+            </div>  
+
+            <div class="review-form">
+                <h3 class="review-form-title">Додати відгук:</h3>
+                <form class="review-form-input">
+                    <input type="text" placeholder="Ваше ім’я" class="review-form-input-name">
+                    <textarea name="textarea"rows="10" cols="50" placeholder="Ваш відгук:" class="review-form-input-textarea"></textarea>
+                    <button type="submit" class="btn btn--pink review-form-btn" >Відправити</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+</section>
+
+        <!--Payment - секція 6-->
+<section class="container">
+    <h2 class="section-title">Доставка і оплата</h2>
+    <ul class="payment">
+        <li class="payment-item">
+            <p class="payment-item-step">1</p>
+            <p class="payment-item-txt">Ви замовляєте букет через каталог</p>
+        </li>
+        <li class="payment-item">
+            <p class="payment-item-step">2</p>
+            <p class="payment-item-txt">Ви оплачуєте товар через картку VISA або MC, або Приват24</p>
+        </li>
+        <li class="payment-item">
+            <p class="payment-item-step">3</p>
+            <p class="payment-item-txt">Вам передзвонять наші менеджери, якщо потрібно щось уточнити</p>
+        </li>
+        <li class="payment-item">
+            <p class="payment-item-step">4</p>
+            <p class="payment-item-txt">Надсилаємо фото зібраного букета, щоб узгодити
+                все</p>
+        </li>
+        <li class="payment-item">
+            <p class="payment-item-step">5</p>
+            <p class="payment-item-txt">Доставляємо букет одержувачу протягом 2-х годин</p>
+        </li>
+        <li class="payment-item">
+            <p class="payment-item-step">6</p>
+            <p class="payment-item-txt">Сповістимо Вас дзвінком або повідомленням про доставку букета</p>
+        </li>
+    </ul>
+</section>
+
+    </main>
+    <!--Footer-->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-logo">
+            <img src="../img/logo.png" width="140">
+        </div>
+
+        <div class="footer-inner">
+            <ul class="footer-inner-item">
+                <h3 class="footer-inner-item-title">Контакти</h3>
+                <li class="footer-inner-item-links"> <a href="tel:(095)0000000">(095) 000 00 00</a></li>
+                <li class="footer-inner-item-links"> <a href="tel:(095)0000000">(097) 000 00 00</a></li>
+                <li class="footer-inner-item-links"><a href="#" target="_blank">Ми працюємо цілодобово</a></li>
+            </ul>
+            <ul class="footer-inner-item">
+                <h3 class="footer-inner-item-title"><a href="#" target="_blank">Інформація</a></h3>
+                <li class="footer-inner-item-links"><a href="#" target="_blank">Про нас</a></li>
+                <li class="footer-inner-item-links"><a href="#" target="_blank">Хіт продажу</a></li>
+                <li class="footer-inner-item-links"><a href="#" target="_blank">Відгуки</a></li>
+                <li class="footer-inner-item-links"><a href="#" target="_blank">Доставка і оплата</a></li>
+            </ul>
+            <ul class="footer-inner-item">
+                <h3 class="footer-inner-item-title"><a href="#" target="_blank">Каталог</a></h3>
+                <li class="footer-inner-item-links"><a href="#" target="_blank">Збери свій букет</a></li>
+                <li class="footer-inner-item-links"><a href="#" target="_blank">Живі квіти</a></li>
+                <li class="footer-inner-item-links"><a href="#" target="_blank">Кімнатні рослин</a>и</li>
+            </ul>
+       
+
+        <div class="footer-inner-contacts">
+            <div class="footer-inner-form">
+                <input class="footer-inner-form-input" type="email" placeholder="Введіть свій e-mail">
+                <button class="btn btn--pink" type="submit">Підписатися</button>
+            </div>
+            <ul class="footer-inner-social">
+                <li class="footer-inner-socia-item">
+                    <a href="#" target="_blank"><img src="../img/inst.png" alt="inst" width="25"></a>
+                </li>
+                <li class="footer-inner-socia-item">
+                    <a href="#" target="_blank"><img src="../img/fb.png" alt="facebook" width="25"></a>
+                </li>
+                <li class="footer-inner-social-item">
+                    <a href="#" target="_blank"><img src="../img/viber.png" alt="viber" width="28"></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    </div>
+
+</footer>
+    <div class="popup" id="popup">
+    <div class="popup-area" id="cart-inner">
+        <a  class="popup-close" id="popup_close">x</a>
+        <h3 class="popup-title">Кошик</h3>
+        <div class="popup-cart">
+            <!-- <img src="../img/bouquet_cart1.png" width="100"> -->
+            <div class="popup-cart-name">
+                <!-- <p class="popup-txt">Ніжна свіжість: троянди та лілії</p> 
+                <p class="popup-txt">450 грн </p>  -->
+                <p class="popup-txt">Немає товарів у кошику</p>
+            </div>  
+        </div>
+      <div class="popup-submit">
+        <a href="#" value="" class="btn">Оформити замовлення</a>
+      </div>
+       
+    </div>
+</div>
+    <script defer src="js/script.js"></script>
+</body>
+</html>
