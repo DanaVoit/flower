@@ -21,8 +21,8 @@ jobs:
     - name: Install dependencies
       run: npm install
 
-    - name: Gulp
-      run: gulp
+    - name: Build the site
+      run: npx gulp
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3

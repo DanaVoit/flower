@@ -117,14 +117,3 @@ exports.html = html;
 exports.build = build;
 exports.watch = watch;
 exports.default = watch;
-
-
-
-
-var ghPages = require('gulp-gh-pages');
-
-gulp.task('deploy', function() {
-  return gulp.src('./dist/**/*')
-    .pipe(ghPages());
-});
-
